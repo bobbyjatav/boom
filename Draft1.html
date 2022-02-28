@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Draft</title>
+<style>
+nav ul{list-style-type:none;
+   margin:0px;
+   padding:0px;
+   background-color:#047730;
+   overflow:hidden; 
+   
+}
+
+nav ul li{float: left;
+   display: block;
+   padding: 10px 50px 10px;
+   color:black;
+}
+
+nav ul li.menu{display: block;
+   padding: 10px 50px 10px;
+   color:black;
+   text-decoration: none;
+}
+
+
+nav ul li:hover, nav ul li a:hover{background-color:black;
+   color: white;
+   font-weight: bolder;
+         
+}
+nav ul li.right, nav li.right-b{float: right;}
+
+table, tr, th, td {border: 2px solid black;
+border-collapse: collapse;
+width: auto ;
+margin: 5px;
+padding: 10px;
+text-align: center;
+}
+
+nav ul li.menu{
+   display:none;
+}
+
+
+th:hover, td:hover{background-color: #333333;
+color:aliceblue;
+font-weight:bold;}
+
+table{width: 100%;
+}
+
+div.order-list ol {list-style-type: lower-alpha;
+list-style-position: outside;}
+div.unorder-list ol {list-style-type: square;
+   list-style-position:inside;
+
+}
+
+@media screen and (max-width:600px) {
+   nav ul li:not(:nth-child(1)) {
+      display:none;
+
+   }
+   nav ul li.menu{
+      display: block;
+      float: right;
+   }
+   ul.step.dropdown-menu li.menu {
+      position: absolute;
+      top: 0;  
+      right: 0;
+      
+   }
+   nav ul li a{
+      text-decoration: none;
+      float: left;
+   display: block;
+   color:black;
+}
+   }
+   ul.step.dropdown-menu {
+      position: relative;
+   }
+   ul.step.dropdown-menu li {
+     display:list-item;
+     float: none;
+
+  }
+  
+
+
+
+
+   
+}
+
+
+
+</style>
+
+<script>
+   function myfunction() {
+      var x = document.getElementById("dropdown");
+      if (x.className === "step") {
+         x.className += " dropdown-menu";
+      }
+      else {
+         x.className = "step";
+      }
+   }
+</script>
+
+</head>
+<body>
+<h1>Let's start with unordered list</h1>
+<div>
+<nav>
+<ul class="step" id="dropdown">
+<li>Home</li>
+<li>About</li>
+<li>Extra</li>
+<li class="right">Sign up</li>
+<li class="right-b">Sign in</li>
+<li class="menu"><a href="javascript:void(0);" onclick="myfunction()">&#9776;</a></li>
+</ul>
+</nav>
+</div>
+<br><br><br>
+<div style="overflow-x: auto; overflow-y:scroll;">
+<form autocomplete="no">
+<fieldset>
+<legend>Personal Details</legend>
+<lable for="fname">First Name:</lable><br>
+<input type="text" id="fname" name="fname"><br><br>
+<lable for="lname">Last Name:</lable><br>
+<input type="text" id="lname" name="lname"><br><br>
+<lable for="email">E-Mail ID:</lable><br>
+<input type="email" id="email" name="email"><br><br>
+<p>Select your Gender</p>
+<input type="radio" id="male" name="gender" value="Male">
+<lable for="male">Male</lable>
+<input type="radio" id="female" name="gender" value="Female">
+<lable for="female">Female</lable>
+<input type="radio" id="other" name="gender" value="Other">
+<lable for="other">Other</lable><br><br>
+<p>Proof of Identification</p>
+<input type="checkbox" id="adhar" name="identification" value="Adhar Card">
+<lable for="adhar">Adhar Card</lable>
+<input type="checkbox" id="pcard" name="identification" value="Pan Card">
+<inpute type="checkbox" id="dlicense" name="identification" value="Driving License">
+<lable for="dlicense">Driving License</lable><br><br>
+<input type="submit" value="Submit">
+</fieldset>
+</form>
+</div>
+<br>
+<br>
+<div style="overflow-x: auto;">
+<table>
+  <tr><th colspan="5">Personal Details</th></tr>   
+   <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Phone Number</th>
+      <th>Address</th>
+      <th>Education</th>
+   </tr>
+   <tr>
+      <td>Prem</td>
+      <td>Kamble</td>
+      <td>9512478630</td>
+      <td>Yerwada</td>
+      <td rowspan="4">B.Com</td>
+   </tr>
+   <tr>
+      <td>Sunil</td>
+      <td>Yadav</td>
+      <td>9632587410</td>
+      <td>Kharadi</td>
+   </tr>
+   <tr>
+      <td>Suraj</td>
+      <td>Yadav</td>
+      <td>9637587410</td>
+      <td>Vishrantwadi</td>
+   </tr>
+   <tr>
+      <td>Jitesh</td>
+      <td>Chaudary</td>
+      <td>9698587410</td>
+      <td>Lakshmi Nagar</td>
+   </tr>
+</table>
+</div>
+
+<br>
+<br>
+ 
+<div class="unorder-list">
+   <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Cola</li>
+   </ul>
+</div>
+<br>
+<br>
+<div class="order-list">
+   <ol>
+      <li>Pizza</li>
+      <li>Chat</li>
+      <li>Burger</li>
+   </ol>
+</div>
+
+</>
+</body>
+</html>
